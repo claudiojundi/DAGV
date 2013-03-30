@@ -131,13 +131,13 @@
 
 +(NSString *)loadPlistFile{
     
-//    NSString *plistFile;
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-//	NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *plistFile;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
     
-//    plistFile = [NSString stringWithFormat:@"%@/Plist/%@.plist", documentsDir, FILE_NAME];
+    plistFile = [NSString stringWithFormat:@"%@/Plist/%@.plist", documentsDir, FILE_NAME];
     ///////////////////////////////////	//////////////////////////////////////	/////////////////////////// TEST ONLY FOR NEW PLIST
-    NSString *plistFile = [[NSBundle mainBundle] pathForResource:@"FeedDAGV" ofType:@"plist"];
+//    NSString *plistFile = [[NSBundle mainBundle] pathForResource:@"FeedDAGV" ofType:@"plist"];
     ///////////////////////////////////	//////////////////////////////////////	///////////////////////////
     return  plistFile;
     
