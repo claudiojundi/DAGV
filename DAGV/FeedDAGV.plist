@@ -4,7 +4,7 @@
 <dict>
 	<key>Version</key>
 	<string>6.0</string>
-	<key>Proximo Evento</key>
+	<key>Evento mais próximo</key>
 	<array>
 		<dict>
 			<key>imagem</key>

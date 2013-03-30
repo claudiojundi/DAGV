@@ -27,7 +27,7 @@
 + (NSDictionary *)getNextEventSelected:(int)index
 {
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[LAFileManager loadPlistFile]];
-    return dict[@"Proximo Evento"][index];
+    return dict[@"Evento mais próximo"][index];
 }
 
 @end
