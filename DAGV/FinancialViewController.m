@@ -30,11 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-      [self setTitleNavigationController:@"FINANCEIRO"];
-    
-    
-    
 	// Do any additional setup after loading the view.
 }
 
@@ -62,7 +57,7 @@
     MoreCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell"];
     NSString *string = [array objectAtIndex:indexPath.row];
     
-    [cell.titleLabel setText:[string uppercaseString]];
+    [cell.titleLabel setText:string];
     
        
     

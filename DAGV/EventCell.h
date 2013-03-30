@@ -10,8 +10,6 @@
 
 @interface EventCell : UITableViewCell
 
-@property (strong,nonatomic) IBOutlet UITextView *descriptionTextView;
-
-
+@property (strong,nonatomic) IBOutlet UILabel *descriptionTextView;
 
 @end

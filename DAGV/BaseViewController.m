@@ -35,10 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setTitleNavigationController:(NSString *)title{
-   
-    [self.navigationItem setTitle: [title uppercaseString]];
-
-}
-
 @end

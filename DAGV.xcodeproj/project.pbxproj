@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D0C6212169C4CB90006C10A /* FeedDAGV.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D0C6211169C4CB90006C10A /* FeedDAGV.plist */; };
+		2B6CEA3117060A4E00A89898 /* CustomTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CEA3017060A4E00A89898 /* CustomTabBarView.m */; };
+		2B6CEA3317060A7E00A89898 /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6CEA3217060A7E00A89898 /* CustomTabBarView.xib */; };
+		2B6CEA37170627C000A89898 /* UIImage+AverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CEA36170627C000A89898 /* UIImage+AverageColor.m */; };
+		2B6CEA3917062EE700A89898 /* FeedDAGV.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B6CEA3817062EE700A89898 /* FeedDAGV.plist */; };
+		2B6CEA3C17076D1C00A89898 /* ExtraHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6CEA3B17076D1C00A89898 /* ExtraHeader.xib */; };
+		2B6CEA3E170770DE00A89898 /* EventHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6CEA3D170770DE00A89898 /* EventHeader.xib */; };
 		2D0C621A169C57C00006C10A /* Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6219169C57C00006C10A /* Events.m */; };
 		2D0C6234169C5CB70006C10A /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6221169C5CB70006C10A /* ASIAuthenticationDialog.m */; };
 		2D0C6235169C5CB70006C10A /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0C6224169C5CB70006C10A /* ASIDataCompressor.m */; };
@@ -181,7 +186,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D0C6211169C4CB90006C10A /* FeedDAGV.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FeedDAGV.plist; sourceTree = "<group>"; };
+		2B6CEA2F17060A4E00A89898 /* CustomTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarView.h; sourceTree = "<group>"; };
+		2B6CEA3017060A4E00A89898 /* CustomTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarView.m; sourceTree = "<group>"; };
+		2B6CEA3217060A7E00A89898 /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
+		2B6CEA35170627C000A89898 /* UIImage+AverageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AverageColor.h"; sourceTree = "<group>"; };
+		2B6CEA36170627C000A89898 /* UIImage+AverageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AverageColor.m"; sourceTree = "<group>"; };
+		2B6CEA3817062EE700A89898 /* FeedDAGV.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FeedDAGV.plist; sourceTree = "<group>"; };
+		2B6CEA3B17076D1C00A89898 /* ExtraHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtraHeader.xib; sourceTree = "<group>"; };
+		2B6CEA3D170770DE00A89898 /* EventHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventHeader.xib; sourceTree = "<group>"; };
 		2D0C6218169C57C00006C10A /* Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Events.h; sourceTree = "<group>"; };
 		2D0C6219169C57C00006C10A /* Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Events.m; sourceTree = "<group>"; };
 		2D0C6220169C5CB70006C10A /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
@@ -426,6 +438,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B6CEA2E17060A1000A89898 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B6CEA2F17060A4E00A89898 /* CustomTabBarView.h */,
+				2B6CEA3017060A4E00A89898 /* CustomTabBarView.m */,
+				2B6CEA3217060A7E00A89898 /* CustomTabBarView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B6CEA34170627A200A89898 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2B6CEA35170627C000A89898 /* UIImage+AverageColor.h */,
+				2B6CEA36170627C000A89898 /* UIImage+AverageColor.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2B6CEA3A17076CEC00A89898 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2B6CEA3B17076D1C00A89898 /* ExtraHeader.xib */,
+				2B6CEA3D170770DE00A89898 /* EventHeader.xib */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		2D0C6217169C57A50006C10A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,7 +578,7 @@
 		2DFF14F3169C46680082F0A7 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				2D0C6211169C4CB90006C10A /* FeedDAGV.plist */,
+				2B6CEA3817062EE700A89898 /* FeedDAGV.plist */,
 			);
 			name = Plist;
 			sourceTree = "<group>";
@@ -732,6 +772,9 @@
 		3F6F1224166C54BB007D89F8 /* DAGV */ = {
 			isa = PBXGroup;
 			children = (
+				2B6CEA3A17076CEC00A89898 /* Headers */,
+				2B6CEA34170627A200A89898 /* Categories */,
+				2B6CEA2E17060A1000A89898 /* Views */,
 				2D0C6217169C57A50006C10A /* Models */,
 				2DFF14F6169C48360082F0A7 /* Cell */,
 				2DFF14F2169C46590082F0A7 /* Classes */,
@@ -877,7 +920,6 @@
 				3F46769C168B8785008C09D5 /* icn_news_on@2x.png in Resources */,
 				3F1F9741168B9077006CDA28 /* img_nav_bar.png in Resources */,
 				3F1F9742168B9077006CDA28 /* img_nav_bar@2x.png in Resources */,
-				2D0C6212169C4CB90006C10A /* FeedDAGV.plist in Resources */,
 				3FEC775316AE431D00E88865 /* img_club_benefits.png in Resources */,
 				3FEC775416AE431D00E88865 /* img_club_benefits@2x.png in Resources */,
 				3FEC775516AE431D00E88865 /* img_documents.png in Resources */,
@@ -906,6 +948,10 @@
 				34C406BE16D34DDB0005DA9C /* icn_news_off_ipad@2x.png in Resources */,
 				34C406BF16D34DDB0005DA9C /* icn_news_on_ipad.png in Resources */,
 				34C406C016D34DDB0005DA9C /* icn_news_on_ipad@2x.png in Resources */,
+				2B6CEA3317060A7E00A89898 /* CustomTabBarView.xib in Resources */,
+				2B6CEA3917062EE700A89898 /* FeedDAGV.plist in Resources */,
+				2B6CEA3C17076D1C00A89898 /* ExtraHeader.xib in Resources */,
+				2B6CEA3E170770DE00A89898 /* EventHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,6 +1043,8 @@
 				2DE0B80A16A044520016026D /* Extras.m in Sources */,
 				2DE0B81116A066E30016026D /* LoadViewController.m in Sources */,
 				3F8B48C616B783E5000D657D /* LinksCell.m in Sources */,
+				2B6CEA3117060A4E00A89898 /* CustomTabBarView.m in Sources */,
+				2B6CEA37170627C000A89898 /* UIImage+AverageColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

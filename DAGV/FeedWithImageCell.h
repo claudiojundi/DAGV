@@ -19,5 +19,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImageView;
 
+- (void)configureCellForNextEventsWithOptions:(NSDictionary *)options;
+- (void)configureCellForNewsWithOptions:(NSDictionary *)options;
+- (void)configureCellForEventsWithOptions:(NSDictionary *)options;
+- (void)configureCellForClubWithOptions:(NSDictionary *)options;
 
 @end

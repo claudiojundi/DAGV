@@ -26,9 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-
-    [self setTitleNavigationController:@"NOTÍCIAS"];
     
     
 //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

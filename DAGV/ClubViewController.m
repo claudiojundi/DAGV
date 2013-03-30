@@ -9,70 +9,37 @@
 #import "ClubViewController.h"
 #import "ItemDetail.h"
 #import "ClubCell.h"
+#import "UIImage+AverageColor.h"
 
 @interface ClubViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
-
 @property (strong, nonatomic) IBOutlet UITableView *clubTableView;
-
 @property (nonatomic, strong) NSString *siteSelected;
-
 @property (nonatomic, strong) NSMutableArray *searchArray;
-
 @property (nonatomic) BOOL isSearching;
 
 @end
 
 @implementation ClubViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _searchArray = [[NSMutableArray alloc] init];
-    
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self setTitleNavigationController:_item];
-
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidUnload {
-    [self setSearchTextField:nil];
-    [self setClubTableView:nil];
-    [super viewDidUnload];
-}
-
 
 #pragma mark - Textfield Delegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     //INICIA A BUSCA
     [_searchArray removeAllObjects];
     
     _searchArray = [self search:_searchTextField.text];
     
     [_searchTextField resignFirstResponder];
-    
 
     if ([_searchArray count] > 0) {
         [_clubTableView reloadData];
@@ -80,30 +47,23 @@
     }else{
         _isSearching = NO;
     }
-    
     return YES;
 }
 
-
 #pragma mark - UITableView Delegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if (_isSearching) {
-        
         return [_searchArray count];
-        
-    }else{
-        
+    } else {
         NSArray *array = [ItemDetail getItemDetailSelected:_item];
         return [array count];
-        
     }
-    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSArray *array = [ItemDetail getItemDetailSelected:_item];
     ClubCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClubCell"];
     
@@ -114,8 +74,6 @@
     }else{
         index = indexPath.row;
     }
-   //
-//    [cell.thumbImageView setImage:[UIImage imageNamed:[[array objectAtIndex:indexPath.row] valueForKey:@"imagem"]]];
     [cell.typeLabel setText:[[array objectAtIndex:index] valueForKey:@"classificacao"]];
     [cell.placeLabel setText:[[array objectAtIndex:index] valueForKey:@"nome"]];
     [cell.addressLabel setText:[[array objectAtIndex:index] valueForKey:@"endereço"]];
@@ -125,47 +83,29 @@
     [cell.discountLabel setText:[[array objectAtIndex:index] valueForKey:@"desconto"]];
     [cell.siteLabel setTitle:[[array objectAtIndex:index] valueForKey:@"site"] forState:UIControlStateNormal];
     [cell.siteLabel addTarget:self action:@selector(openLink:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
+
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
     dispatch_async(queue, ^{
-        
         NSString *imageStringURL = [[array objectAtIndex:index] valueForKey:@"imagem"];
-        
-        
         NSURL * imageURL = [NSURL URLWithString:imageStringURL];
-        
          NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-        
-        // NSURL *imageURL2 = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-        
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImage * image = [UIImage imageWithData:imageData];
-            
             [cell.thumbImageView setImage:image];
+            [cell.thumbImageView setBackgroundColor:[image averageColor]];
         });
     });
-    
-    
-    
-    
-    
-    
-    
     
     if (indexPath.row == [_searchArray count]) {
         [_searchArray removeAllObjects];
     }
-    
     return cell;
-    
 }
 
 #pragma mark - Internal Methods
 
--(void)openLink:(id)sender{
+- (void)openLink:(id)sender
+{
     UIButton *button = sender;
     _siteSelected = [NSString stringWithFormat:@"http://%@", button.titleLabel.text];
     NSString *message = [NSString stringWithFormat:@"Você esta saindo do aplicativo para entrar no site \n%@\n Deseja continuar?", _siteSelected];
@@ -176,23 +116,17 @@
                                           cancelButtonTitle:@"Não"
                                           otherButtonTitles:@"Sim", nil];
     [alert show];
-    
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    switch (buttonIndex) {
-        case 1:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_siteSelected]];
-
-            break;
-            
-        default:
-            break;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_siteSelected]];
     }
 }
 
--(NSMutableArray *)search:(NSString *)text{
-    
+- (NSMutableArray *)search:(NSString *)text
+{
     NSMutableArray *indexFounded = [[NSMutableArray alloc] init];
     
     NSArray *array = [ItemDetail getItemDetailSelected:_item];
@@ -207,7 +141,6 @@
         NSString *produtos = [[[array objectAtIndex:i] valueForKey:@"produtos da promocao"] lowercaseString];
         NSString *desconto = [[[array objectAtIndex:i] valueForKey:@"desconto"] lowercaseString];
         NSString *site = [[[array objectAtIndex:i] valueForKey:@"site"] lowercaseString];
-        
         
         NSRange classificacaoRange = [classificacao rangeOfString:text options:NSCaseInsensitiveSearch];
         NSRange nomeRange = [nome rangeOfString:text options:NSCaseInsensitiveSearch];
@@ -241,9 +174,7 @@
 //            [indexFounded addObject:[NSString stringWithFormat:@"%d",i]];
 //        }
     }
-    
     return indexFounded;
-    
 }
 
 @end

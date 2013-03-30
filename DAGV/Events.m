@@ -22,7 +22,12 @@
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[LAFileManager loadPlistFile]];
 
     return [[dict objectForKey:@"Eventos"] objectAtIndex:index];
-    
+}
+
++ (NSDictionary *)getNextEventSelected:(int)index
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[LAFileManager loadPlistFile]];
+    return dict[@"Proximo Evento"][index];
 }
 
 @end

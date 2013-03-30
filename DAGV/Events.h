@@ -6,11 +6,10 @@
 //  Copyright (c) 2013 Claudio Jundi Sassaki. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface Events : NSObject
 
 +(NSArray *)getEventList;
 +(NSDictionary *)getEventSelected:(int)index;
++ (NSDictionary *)getNextEventSelected:(int)index;
 
 @end

@@ -3,56 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>Version</key>
-	<string>1.0</string>
-	<key>Eventos</key>
+	<string>6.0</string>
+	<key>Proximo Evento</key>
 	<array>
 		<dict>
 			<key>imagem</key>
-			<string></string>
+			<string>http://www.dagv.com.br/app/eventos.jpg</string>
 			<key>titulo</key>
-			<string>Gioconda Venuta</string>
+			<string>GinECana</string>
 			<key>data</key>
-			<string>30/01/2013</string>
+			<string>21/03/2013</string>
 			<key>sobre</key>
-			<string>blah blah blah</string>
+			<string>Depois do sucesso da GVJada, vem aí a tradicional GinECana 2013/1!</string>
 			<key>descricao</key>
 			<array>
 				<dict>
 					<key>tipo</key>
-					<string>open bar</string>
-					<key>texto</key>
-					<string>Belvedere Black Label Jack Daniel&apos;s Finlandia Finlandia Flavors Chandon</string>
+					<string>Local</string>
+					<key>descricao</key>
+					<string>Vai-Vai</string>
 				</dict>
 				<dict>
 					<key>tipo</key>
-					<string>vendas</string>
+					<string>Horário</string>
 					<key>descricao</key>
-					<string>O DAGV em parceiria com aaTag desenvolveu um novo sistema de vendas para tornar sua entrada na festa mais fácil, segura e divertida! Fique atento às surpresas e promoções nos dias da venda!</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>imagem</key>
-			<string></string>
-			<key>titulo</key>
-			<string>Gioconda Venuta 2</string>
-			<key>data</key>
-			<string>15/02/2013</string>
-			<key>sobre</key>
-			<string>blah blah blah</string>
-			<key>descricao</key>
-			<array>
-				<dict>
-					<key>tipo</key>
-					<string>open bar</string>
-					<key>descricao</key>
-					<string>Belvedere Black Label Jack Daniel&apos;s Finlandia Finlandia Flavors Chandon</string>
+					<string>17 horas</string>
 				</dict>
 				<dict>
 					<key>tipo</key>
-					<string>vendas</string>
+					<string>Preços</string>
 					<key>descricao</key>
-					<string>O DAGV em parceiria com aaTag desenvolveu um novo sistema de vendas para tornar sua entrada na festa mais fácil, segura e divertida! Fique atento às surpresas e promoções nos dias da venda!</string>
+					<string>Aluno: 20 / Aluna: 15 / Não aluno: 35 (primeiro lote) / Não aluna: 25 (primeiro lote)</string>
 				</dict>
 			</array>
 		</dict>
@@ -60,14 +41,83 @@
 	<key>Noticias</key>
 	<array>
 		<dict>
+			<key>imagem</key>
+			<string>http://www.dagv.com.br/app/comunicacao.jpg</string>
 			<key>titulo</key>
-			<string>Calendário de provas finais unificadas</string>
+			<string>Aplicativo DAGV!</string>
 			<key>noticia</key>
-			<string>A coordenação da FGV liberou hoje, no aluno online, as datas da provas finais, juntamente com as salas que serão realizadas e o horário.</string>
+			<string>Caros gevenianos!
+			Visando expandir as possibilidades de comunicação entre o DA e os alunos, lançamos hoje o aplicativo oficial do DAGV!
+			Vale lembrar que somos o primeiro diretório/centro acadêmico do país a possuir algo do tipo, demonstrando nosso pioneirismo e preocupação com a comunicação interna do órgão com seus associados.</string>
 			<key>data</key>
-			<string>08/01/2013</string>
+			<string>28/02/2013</string>
 			<key>hora</key>
-			<string>11:00</string>
+			<string>16:20</string>
+		</dict>
+	</array>
+	<key>Eventos</key>
+	<array>
+		<dict>
+			<key>imagem</key>
+			<string>http://www.dagv.com.br/app/cultural.jpg</string>
+			<key>titulo</key>
+			<string>CineDebate &quot;O Ditador&quot;</string>
+			<key>data</key>
+			<string>11/04/2013</string>
+			<key>sobre</key>
+			<string>Vem aí o terceiro CineDebate do semestre!</string>
+			<key>descricao</key>
+			<array>
+				<dict>
+					<key>tipo</key>
+					<string>Filme</string>
+					<key>descricao</key>
+					<string>O Ditador</string>
+				</dict>
+				<dict>
+					<key>tipo</key>
+					<string>Horário</string>
+					<key>descricao</key>
+					<string>17 horas</string>
+				</dict>
+				<dict>
+					<key>tipo</key>
+					<string>Local</string>
+					<key>descricao</key>
+					<string>DAGV</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>imagem</key>
+			<string>http://www.dagv.com.br/app/eventos.jpg</string>
+			<key>titulo</key>
+			<string>GinECana</string>
+			<key>data</key>
+			<string>21/03/2013</string>
+			<key>sobre</key>
+			<string>Depois do sucesso da GVJada, vem aí a tradicional GinECana 2013/1!</string>
+			<key>descricao</key>
+			<array>
+				<dict>
+					<key>tipo</key>
+					<string>Local</string>
+					<key>descricao</key>
+					<string>Vai-Vai</string>
+				</dict>
+				<dict>
+					<key>tipo</key>
+					<string>Horário</string>
+					<key>descricao</key>
+					<string>17 horas</string>
+				</dict>
+				<dict>
+					<key>tipo</key>
+					<string>Preços</string>
+					<key>descricao</key>
+					<string>Aluno: 20 / Aluna: 15 / Não aluno: 35 (primeiro lote) / Não aluna: 25 (primeiro lote)</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>Mais - Itens</key>
@@ -84,110 +134,523 @@
 		<array>
 			<dict>
 				<key>classificacao</key>
-				<string>Bares</string>
+				<string>Outros</string>
 				<key>imagem</key>
-				<string></string>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
 				<key>nome</key>
-				<string>Devassa - Bela Cintra</string>
+				<string>Bem Bonita Unhas e Depilação</string>
 				<key>endereço</key>
-				<string>Rua Bela Cintra, 1579 - Jardins</string>
+				<string>Avenida Sabiá, 26 - Moema</string>
 				<key>dias de promocao</key>
-				<string>Todos os dias da semana</string>
+				<string>Todos os dias</string>
 				<key>numero de acompanhantes</key>
-				<string>Aluno + todos acompanhantes</string>
+				<string>Somente o aluno</string>
 				<key>produtos da promocao</key>
-				<string>Desconto na conta</string>
+				<string>Todos os serviços</string>
 				<key>desconto</key>
-				<string>15%</string>
+				<string>10%</string>
 				<key>site</key>
-				<string>www.devassa.com.br</string>
+				<string>http://www.bembonita.net</string>
 			</dict>
 			<dict>
 				<key>classificacao</key>
-				<string>Bares</string>
+				<string>Restaurantes próximos</string>
 				<key>imagem</key>
-				<string></string>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
 				<key>nome</key>
-				<string>Exquisito - Bela Cintra</string>
+				<string>Portal</string>
 				<key>endereço</key>
-				<string>Rua Bela Cintra, 532 - Consolação</string>
+				<string>Rua Itapeva, 227</string>
 				<key>dias de promocao</key>
 				<string>Todos os dias da semana</string>
 				<key>numero de acompanhantes</key>
-				<string>Aluno + todos acompanhantes</string>
+				<string>Somente o aluno</string>
 				<key>produtos da promocao</key>
-				<string>Desconto na conta</string>
+				<string>Almoço</string>
 				<key>desconto</key>
-				<string>15%</string>
+				<string>10%</string>
 				<key>site</key>
-				<string>www.devassa.com.br</string>
+				<string></string>
 			</dict>
 			<dict>
 				<key>classificacao</key>
-				<string>Restaurantes</string>
+				<string>Restaurantes próximos</string>
 				<key>imagem</key>
-				<string></string>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
 				<key>nome</key>
-				<string>Las Chicas - Oscar Freire</string>
+				<string>Merkant</string>
 				<key>endereço</key>
-				<string>Rua Oscar Freire, 1607 - Pinheiros</string>
+				<string>Rua Itapeva, 207</string>
 				<key>dias de promocao</key>
 				<string>Todos os dias da semana</string>
 				<key>numero de acompanhantes</key>
-				<string>1 acompanhante</string>
+				<string>Somente o aluno</string>
 				<key>produtos da promocao</key>
-				<string>Coca-Cola</string>
+				<string>Almoço</string>
+				<key>desconto</key>
+				<string>10%</string>
+				<key>site</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Restaurantes próximos</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Metaphoras</string>
+				<key>endereço</key>
+				<string>Rua Sílvia, 27</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias da semana</string>
+				<key>numero de acompanhantes</key>
+				<string>Somente o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Almoço</string>
+				<key>desconto</key>
+				<string>10%</string>
+				<key>site</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Restaurantes próximos</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>The Universe Flat</string>
+				<key>endereço</key>
+				<string>Rua Pamplona, 83</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias da semana</string>
+				<key>numero de acompanhantes</key>
+				<string>Somente o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Buffet</string>
+				<key>desconto</key>
+				<string>Um refrigerante grátis</string>
+				<key>site</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Praça São Lourenço</string>
+				<key>endereço</key>
+				<string>Rua do Ator, 608, Vila Olímpia</string>
+				<key>dias de promocao</key>
+				<string>Segunda a sexta, exceto feriados</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno + 5 acommpanhantes</string>
+				<key>produtos da promocao</key>
+				<string>Buffet (almoço); Prato principal (janta)</string>
 				<key>desconto</key>
 				<string>20%</string>
 				<key>site</key>
-				<string></string>
+				<string>http://www.pracasaolourenco.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>La Grassa</string>
+				<key>endereço</key>
+				<string>Av. Juriti, 32, Moema</string>
+				<key>dias de promocao</key>
+				<string>Segunda a sexta, exceto feriados</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno + 5 acommpanhantes</string>
+				<key>produtos da promocao</key>
+				<string>Prato principal</string>
+				<key>desconto</key>
+				<string>20%</string>
+				<key>site</key>
+				<string>http://www.lagrassa.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Quattrino</string>
+				<key>endereço</key>
+				<string>Rua Oscar Freire, 506, Jardins</string>
+				<key>dias de promocao</key>
+				<string>Domingo à Quinta</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno + 1 acommpanhantes</string>
+				<key>produtos da promocao</key>
+				<string>Jantar</string>
+				<key>desconto</key>
+				<string>10%</string>
+				<key>site</key>
+				<string>http://www.quattrino.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Devassa - Bela Cintra</string>
+				<key>endereço</key>
+				<string>Rua Bela Cintra, 1579, Jardins</string>
+				<key>dias de promocao</key>
+				<string>Segunda à Sexta</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno e acompanhantes</string>
+				<key>produtos da promocao</key>
+				<string>Desconto na conta</string>
+				<key>desconto</key>
+				<string>15%</string>
+				<key>site</key>
+				<string>http://www.devassa.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Restaurante Zaatar</string>
+				<key>endereço</key>
+				<string>Rua Bandeira Paulista, 485, Itaim Bibi</string>
+				<key>dias de promocao</key>
+				<string>Segunda à Sexta (jantar); Sábado (todos os dias); Domingo (almoço)</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Qualquer ítem, com exceção das bebidas</string>
+				<key>desconto</key>
+				<string>15% no valor dos ítens</string>
+				<key>site</key>
+				<string>http://www.zaatarrestaurante.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Cosi</string>
+				<key>endereço</key>
+				<string>Rua Jacques Félix, 381, Vila Nova Conceição</string>
+				<key>dias de promocao</key>
+				<string>Segunda à Quinta</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Entrada, prato principal e sobremesa</string>
+				<key>desconto</key>
+				<string>15% no valor dos ítens</string>
+				<key>site</key>
+				<string>http://www.restaurantecosi.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Jullia Pizza Bar</string>
+				<key>endereço</key>
+				<string>Rua Francisca Julia, 465, Santana</string>
+				<key>dias de promocao</key>
+				<string>Segunda à quinta</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno e acompanhantes</string>
+				<key>produtos da promocao</key>
+				<string>Desconto na conta</string>
+				<key>desconto</key>
+				<string>10%</string>
+				<key>site</key>
+				<string>http://www.pizzariajullia.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Sr. Pitanga</string>
+				<key>endereço</key>
+				<string>Rua Tabapuã, 1446, Itaim Bibi</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Entrada</string>
+				<key>desconto</key>
+				<string>Grátis até as 22h, e R$10 homem e R$5 mulher após às 22h</string>
+				<key>site</key>
+				<string>http://www.srpitanga.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Bares e Restaurantes</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Le Regalade</string>
+				<key>endereço</key>
+				<string>Rua Barão de Tatuí, 285, Santa Cecília</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Cursos, megadegustações, palestras, refeições (almoço e jantar), loja</string>
+				<key>desconto</key>
+				<string>30% (cursos, megadegustações e palestras), 10% (refeições), 15% (loja - pagamentos em dinheiro) e 10% (loja - outras formas de pagamento)</string>
+				<key>site</key>
+				<string>http://www.laregalade.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Baladas</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Wood&apos;s</string>
+				<key>endereço</key>
+				<string>Rua Quatá, 1016, Vila Olímpia</string>
+				<key>dias de promocao</key>
+				<string>Sexta</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Entrada</string>
+				<key>desconto</key>
+				<string>Preço de lista</string>
+				<key>site</key>
+				<string>http://www.woodsbar.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Baladas</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>D-Edge</string>
+				<key>endereço</key>
+				<string>Av. Auro Soares de Moura Andrade, 141, Barra Funda</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Entrada</string>
+				<key>desconto</key>
+				<string>Preço de lista</string>
+				<key>site</key>
+				<string>http://www.d-edge.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Baladas</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Royal</string>
+				<key>endereço</key>
+				<string>Rua da Consolação, 222, Consolação</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Entrada</string>
+				<key>desconto</key>
+				<string>Preço de lista</string>
+				<key>site</key>
+				<string>http://www.royalclub.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Academias</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>V10 Fitness</string>
+				<key>endereço</key>
+				<string>Rua Barata Ribeiro, 220, Bela Vista</string>
+				<key>dias de promocao</key>
+				<string>-</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Matrícula e pacotes</string>
+				<key>desconto</key>
+				<string>50% no preço de matrícula, 10% no preço dos pacotes e possibilidade de trancamento de matrícula em período de férias</string>
+				<key>site</key>
+				<string>http://www.royalclub.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Outros</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Clínica Daniela Fontes</string>
+				<key>endereço</key>
+				<string>Rua Itapeva, 378, cj 11, Bela Vista</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Aluno + Um acompanhante</string>
+				<key>produtos da promocao</key>
+				<string>Depilação a laser e procedimentos estéticos</string>
+				<key>desconto</key>
+				<string>10%</string>
+				<key>site</key>
+				<string>http://www.danielafontes.com.br</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Outros</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Paradiso Hostel (for foreign students)</string>
+				<key>endereço</key>
+				<string>Rua Chuí, 195, Vila Mariana</string>
+				<key>dias de promocao</key>
+				<string>Todos os dias</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Diárias e pacotes mensais</string>
+				<key>desconto</key>
+				<string>20% a 30%</string>
+				<key>site</key>
+				<string>http://www.paradisohostel.com</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Outros</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>Calçados Online</string>
+				<key>endereço</key>
+				<string>-</string>
+				<key>dias de promocao</key>
+				<string>-</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Desconto em compras no site</string>
+				<key>desconto</key>
+				<string>15% - Mediante apresentação do código JGHLYSYHLX</string>
+				<key>site</key>
+				<string>http://www.calcadosonline.com</string>
+			</dict>
+			<dict>
+				<key>classificacao</key>
+				<string>Outros</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cdb.jpg</string>
+				<key>nome</key>
+				<string>H3 Coiffure</string>
+				<key>endereço</key>
+				<string>Av. Paulista, 1159, loja 07, Jardins</string>
+				<key>dias de promocao</key>
+				<string>Segunda à Quarta</string>
+				<key>numero de acompanhantes</key>
+				<string>Apenas o aluno</string>
+				<key>produtos da promocao</key>
+				<string>Manicure e corte</string>
+				<key>desconto</key>
+				<string>Manicure 12%, Corte 27%</string>
+				<key>site</key>
+				<string>http://www.facebook.com/H3Coiffure</string>
 			</dict>
 		</array>
 		<key>Projetos</key>
 		<array>
 			<dict>
 				<key>titulo</key>
-				<string>Provas parciais unificadas</string>
+				<string>Projeto EducaGV</string>
 				<key>noticia</key>
-				<string>A coordenação da FGV liberou hoje, no aluno online, as datas da provas finais, juntamente com as salas que serão realizadas e o horário.</string>
+				<string>O Diretório Acadêmico Getulio Vargas (DAGV) por meio da Diretoria de Responsabilidade Social, em parceria com a Escola de Administração de Empresas de São Paulo (EAESP) e apoio do movimento Todos Pela Educação, apresenta o Projeto EducaGV.
+				O projeto propõe sensibilizar os alunos da graduação das Escolas de Administração e Economia da Fundação Getúlio Vargas, para o tema da educação.
+				Este projeto será dividido em duas etapas principais: 1° Etapa: O Concurso (realizado no semestre passado)
+				2º Etapa: A Implementação - Uma das propostas do concurso será implementada no 1º semestre de 2013 em uma escola da rede pública de ensino de São Paulo.</string>
 				<key>imagem</key>
-				<string></string>
+				<string>http://www.dagv.org.br/app/respsocial.jpg</string>
+			</dict>
+			<dict>
+				<key>titulo</key>
+				<string>CineDebate</string>
+				<key>noticia</key>
+				<string>O modelo dos CineDebate é simples: passamos um filme no DA e depois - com a presença de algum convidado - iniciamos um debate sobre o tema do filme. Serão organizados por volta de 5 CineDebates esse semestre, com grande variedade de temas e discussões.</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cultural.jpg</string>
+			</dict>
+			<dict>
+				<key>titulo</key>
+				<string>Conversa com Políticos</string>
+				<key>noticia</key>
+				<string>Com o objetivo de fomentar as discussões políticas na faculdade, o DAGV lançou o Conversa com Políticos. A iniciativa realiza, no espaço do DAGV, encontros com políticos indicados pelos alunos. O teor dos encontros é bastante aberto, em um modelo de bate-papo entre o convidado e os alunos. Há um tempo inicial para o convidado se apresentar e, depois, uma seção de perguntas e respostas, sem restrições de temas ou perguntas.</string>
+				<key>imagem</key>
+				<string>http://www.dagv.org.br/app/cultural.jpg</string>
 			</dict>
 		</array>
 		<key>Financeiro</key>
 		<array>
-			<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-			<string>www.dagv.com.br/BALANÇO-NOVEMBRO</string>
-			<string>www.dagv.com.br/BALANÇO-FINAL-GESTÃO</string>
+			<string>http://dagv.org.br/F/INICIO_GESTAO.pdf</string>
+			<string>http://dagv.org.br/F/JULHO.pdf</string>
+			<string>http://dagv.org.br/F/AGOSTO.pdf</string>
+			<string>http://dagv.org.br/F/SETEMBRO.pdf</string>
+			<string>http://dagv.org.br/F/OUTUBRO.pdf</string>
 		</array>
 		<key>Documentos</key>
 		<array>
 			<array>
-				<string>Lorem Ipsum Dolor</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
+				<string>Estatuto DAGV</string>
+				<string>http://dagv.org.br/D/Estatuto_DAGV.pdf</string>
 			</array>
 			<array>
-				<string>Consectetuer Adipiscing</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
+				<string>Regimento Eleitoral DAGV</string>
+				<string>http://dagv.org.br/D/RegimentoEleitoral_DAGV.pdf</string>
+			</array>
+			<array>
+				<string>Regimento Câmara Discente DAGV</string>
+				<string>http://dagv.org.br/D/RegimentoCD_DAGV.pdf</string>
+			</array>
+			<array>
+				<string>Boletim Informativo 2012/02</string>
+				<string>http://dagv.org.br/D/Boletim.pdf</string>
 			</array>
 		</array>
 		<key>Links</key>
 		<array>
 			<array>
-				<string>Sed diam</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
+				<string>Site DAGV</string>
+				<string>http://dagv.org.br</string>
 			</array>
 			<array>
-				<string>Magna Aliquam</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
-				<string>www.dagv.com.br/BALANÇO-OUTUBRO</string>
+				<string>Facebook DAGV</string>
+				<string>http://facebook.com/diretorioacademico.getuliovargas</string>
+			</array>
+			<array>
+				<string>Intranet Acadêmica FGV</string>
+				<string>http://intra.eaesp.fgv.br/</string>
+			</array>
+			<array>
+				<string>eClass FGV</string>
+				<string>http://eclass.gv.br/</string>
+			</array>
+			<array>
+				<string>Aluno Online FGV</string>
+				<string>http://www10.fgv.br/academicosp/aonline/logon.asp</string>
 			</array>
 		</array>
 	</dict>

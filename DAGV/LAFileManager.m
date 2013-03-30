@@ -42,18 +42,11 @@
         [self verifyFileVersion];
     }];
     
-//    [file setError:^{
-//        
-//        [self.delegate fileManagerDownloadCompleted:YES];
-//
-//    }];
-    
     [file setFailedBlock:^{
         
         [self.delegate fileManagerDownloadCompleted:YES];
 
         NSLog(@"download error: %@", file.error);
-        
     }];
 }
 
@@ -138,12 +131,14 @@
 
 +(NSString *)loadPlistFile{
     
-    NSString *plistFile;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-	NSString *documentsDir = [paths objectAtIndex:0];
+//    NSString *plistFile;
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+//	NSString *documentsDir = [paths objectAtIndex:0];
     
-    plistFile = [NSString stringWithFormat:@"%@/Plist/%@.plist", documentsDir, FILE_NAME];
-    
+//    plistFile = [NSString stringWithFormat:@"%@/Plist/%@.plist", documentsDir, FILE_NAME];
+    ///////////////////////////////////	//////////////////////////////////////	/////////////////////////// TEST ONLY FOR NEW PLIST
+    NSString *plistFile = [[NSBundle mainBundle] pathForResource:@"FeedDAGV" ofType:@"plist"];
+    ///////////////////////////////////	//////////////////////////////////////	///////////////////////////
     return  plistFile;
     
 }

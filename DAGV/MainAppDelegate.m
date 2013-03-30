@@ -40,7 +40,7 @@
     
     // Override point for customization after application launch.
     
-   
+    [self setAppearance];
     
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
@@ -101,6 +101,23 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma mark - Appearance
+
+- (void)setAppearance
+{
+    // TAB BAR
+    UIColor *tabBarColor = [UIColor colorWithRed:49.0f/255.0f green:49.0f/255.0f blue:49.0f/255.0f alpha:1.0f];
+    [[UITabBar appearance] setTintColor:tabBarColor];
+    
+    // NAV BAR
+    UIImage *navigationBackground = [[UIImage imageNamed:@"img_nav_bar.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [[UINavigationBar appearance] setBackgroundImage:navigationBackground forBarMetrics:UIBarMetricsDefault];
+    
+    // NAV BAR BACK BUTTON
+    UIImage *backButtonImage = [[UIImage imageNamed:@"btn_nav_back"]  resizableImageWithCapInsets:UIEdgeInsetsMake(0,15,0,15)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 }
 
 

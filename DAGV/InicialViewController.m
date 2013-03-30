@@ -18,6 +18,7 @@
 #import "NewsDetailViewController.h"
 #import "EventDetailViewController.h"
 #import "ClubViewController.h"
+#import "UIImage+AverageColor.h"
 
 @interface InicialViewController ()
 
@@ -27,61 +28,31 @@
 
 @property (nonatomic,strong)UIImage *uiimage0;
 @property (nonatomic,strong)UIImage *uiimage2;
-
-
 @end
 
 @implementation InicialViewController
-
-@synthesize uiimage0 = _uiimage0;
-@synthesize uiimage2 = _uiimage2;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-
-    
-
-    [self setTitleNavigationController:@"Inicial"];
-    
-    
-    
-    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
-        LoadViewController *loadViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoadViewController"];
+        LoadViewController *loadViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoadViewController"];
         [self presentViewController:loadViewController animated:NO completion:^{
             //
         }];
         
     } else {
        
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
-        LoadViewController *loadViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"LoadViewController"];
+        LoadViewController *loadViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoadViewController"];
         [self presentViewController:loadViewController animated:NO completion:^{
             //
         }];
     }
     
-     
     _itensArray = [[NSMutableArray alloc] initWithObjects:@"Eventos", @"Noticias", nil];
     [_itensArray addObjectsFromArray:[MoreItens getItensList]];
-    
-    
-    
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -103,235 +74,62 @@
 
 #pragma mark - UITableView Delegate
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    
-//    return [_itensArray count];
-//    
-//}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 4;// [_itensArray count];
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     FeedWithImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeedWithImageCell"];
-
-    NSDictionary *dict;
     
-    if (indexPath.row == 0) {
-        
-        
-      
-        
-        
-        [cell.typeLabel setText:@"Evento mais próximo"];
-         cell.typeLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:17];
-        dict = [Events getEventSelected:0];
-        
-        [cell.titleLabel setText:[dict valueForKey:@"titulo"]];
-        [cell.titleLabel setTextColor:[UIColor colorWithRed:0.75 green:0.68 blue:0.48 alpha:1]];
-        cell.titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
-        
-        [cell.dateLabel setText:[dict valueForKey:@"data"]];
-        [cell.descriptionLabel setText:[dict valueForKey:@"sobre"]];
-        [cell.typeLabel setTextColor:[UIColor whiteColor]];
-        [cell.topBackgroundView setBackgroundColor:[UIColor colorWithRed:0.75 green:0.68 blue:0.48 alpha:1]];
-        
-        
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
-        dispatch_async(queue, ^{
-            
-             NSURL * imageURL = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-            
-            
-            NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-            
-            // NSURL *imageURL2 = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-            
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UIImage * image = [UIImage imageWithData:imageData];
-                
-                _uiimage0 = image;
-                
-                [cell.thumbImageView setImage:image];
-            });
-        });
-
-        
-        
-    }else{
-        if (indexPath.row == 1) {
-            dict = [News getNewSelected:0];
-            [cell.typeLabel setText:@"Notícias"];
-            cell.typeLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:17];
-              [cell.typeLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-            
-            [cell.titleLabel setText:[dict valueForKey:@"titulo"]];
-            [cell.titleLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-            cell.titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
-            
-            [cell.dateLabel setText:[dict valueForKey:@"data"]];
-            [cell.descriptionLabel setText:[dict valueForKey:@"noticia"]];
-            [cell.topBackgroundView setBackgroundColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]];
-            
-            
-            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
-            dispatch_async(queue, ^{
-              
-               
-               NSURL * imageURL = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-               
-               
-                NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-               
-               // NSURL *imageURL2 = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-
-               
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UIImage * image = [UIImage imageWithData:imageData];
-                    
-                    [cell.thumbImageView setImage:image];
-                });
-            });
-            
-            
-            
-        }else{
-            if (indexPath.row == 2) {
-                
-                [cell.typeLabel setText:@"Eventos"];
-                cell.typeLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:17];
-                [cell.typeLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-
-                
-                dict = [Events getEventSelected:0];
-                
-                [cell.titleLabel setText:[dict valueForKey:@"titulo"]];
-                
-                [cell.dateLabel setText:[dict valueForKey:@"data"]];
-                [cell.titleLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-                cell.titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
-                
-                [cell.descriptionLabel setText:[dict valueForKey:@"sobre"]];
-               [cell.topBackgroundView setBackgroundColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]];
-                
-                
-                dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
-                dispatch_async(queue, ^{
-                    
-                    
-                    NSURL * imageURL = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-                    
-                    
-                    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-                    
-                    // NSURL *imageURL2 = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-                    
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        UIImage * image = [UIImage imageWithData:imageData];
-                        
-                        _uiimage2 = image;
-                        
-                        [cell.thumbImageView setImage:image];
-                    });
-                });
-
-                
-
-            }else{
-                if (indexPath.row == 3) {
-                    
-                    NSArray *array = [ItemDetail getItemDetailSelected:@"Clube de benefícios"];
-
-                    [cell.typeLabel setText:@"Clube de Benefícios"];
-                    cell.typeLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:17];
-                    [cell.typeLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-                    
-                    [cell.titleLabel setText:[[array objectAtIndex:0] valueForKey:@"classificacao"]];
-                    [cell.titleLabel setTextColor:[UIColor colorWithRed:0.65 green:0.65 blue:0.65 alpha:1]];
-                   cell.titleLabel.font=[UIFont fontWithName:@"Helvetica-Bold" size:14];
-                    
-                    [cell.dateLabel setText:[[array objectAtIndex:0] valueForKey:@"nome"]];
-                    [cell.descriptionLabel setText:[[array objectAtIndex:0] valueForKey:@"endereço"]];
-                     [cell.topBackgroundView setBackgroundColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]];
-                    
-                    
-                    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
-                    dispatch_async(queue, ^{
-                        
-                        NSString *imageStringURL = [[array objectAtIndex:0] valueForKey:@"imagem"];
-                        
-                        NSURL * imageURL = [NSURL URLWithString:imageStringURL];
-                        
-                        
-                        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-                        
-                        // NSURL *imageURL2 = [NSURL URLWithString:[dict valueForKey:@"imagem"]];
-                        
-                        
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            UIImage * image = [UIImage imageWithData:imageData];
-                            
-                            [cell.thumbImageView setImage:image];
-                        });
-                    });
-
-                }
-            }
-        }
+    switch (indexPath.row) {
+        case 0:
+            [cell configureCellForNextEventsWithOptions:[Events getNextEventSelected:0]];
+            break;
+        case 1:
+            [cell configureCellForNewsWithOptions:[News getNewSelected:0]];
+            break;
+        case 2:
+            [cell configureCellForEventsWithOptions:[Events getEventSelected:0]];
+            break;
+        case 3:
+            [cell configureCellForClubWithOptions:[ItemDetail getItemDetailSelected:@"Clube de benefícios"][0]];
+            break;
+        default:
+            break;
     }
     
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UIStoryboard *mainStoryboard;
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-       mainStoryboard  = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];//TODO
-    }else {
-       mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];//TODO
-    }
-    
-    
-    NewsDetailViewController *newsDetailViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
-    EventDetailViewController *eventDetailViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"EventDetailViewController"];
-    ClubViewController *clubViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"ClubViewController"];
-
-    if (indexPath.row == 0 || indexPath.row == 2) {
-        
-        [self.navigationController pushViewController:eventDetailViewController animated:YES];
-        
-        NSDictionary *dict = [Events getEventSelected:0];
-        
-        [eventDetailViewController.titleLabel setText:[dict valueForKey:@"titulo"]];
-        [eventDetailViewController.dateLabel setText:[dict valueForKey:@"data"]];
-        [eventDetailViewController.descriptionLabel setText:[dict valueForKey:@"sobre"]];
-        [eventDetailViewController setInfoDict:[dict valueForKey:@"descricao"]];
-        
-        if (indexPath.row == 0){
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0: {
+            EventDetailViewController *eventDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EventDetailViewController"];
             
-            [eventDetailViewController.topImageView setImage:_uiimage0];
+            [self.navigationController pushViewController:eventDetailViewController animated:YES];
             
-             
-        }else {
-             [eventDetailViewController.topImageView setImage:_uiimage2];
+            NSDictionary *dict = [Events getNextEventSelected:0];
+            
+            [eventDetailViewController.titleLabel setText:[dict valueForKey:@"titulo"]];
+            [eventDetailViewController.dateLabel setText:[dict valueForKey:@"data"]];
+            [eventDetailViewController.descriptionLabel setText:[dict valueForKey:@"sobre"]];
+            [eventDetailViewController setInfoDict:[dict valueForKey:@"descricao"]];
+            
+            NSString *imageString = dict[@"imagem"];
+            [eventDetailViewController.topImageView setImage:[self imageWithURLString:imageString]];
+            [eventDetailViewController.topImageView setBackgroundColor:[eventDetailViewController.topImageView.image averageColor]];
+            break;
         }
-        
-       
-        
-        
-    }else{
-        
-        if (indexPath.row == 1) {
-            
+        case 1: {
+            NewsDetailViewController *newsDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
             [self.navigationController pushViewController:newsDetailViewController animated:YES];
             
             NSDictionary *dict = [News getNewSelected:0];
@@ -339,18 +137,44 @@
             [newsDetailViewController.titleLabel setText:[dict valueForKey:@"titulo"]];
             [newsDetailViewController.dateLabel setText:[dict valueForKey:@"data"]];
             [newsDetailViewController.descriptionLabel setText:[dict valueForKey:@"noticia"]];
+            break;
+        }
+        case 2: {
+            EventDetailViewController *eventDetailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EventDetailViewController"];
             
-        }else{
+            [self.navigationController pushViewController:eventDetailViewController animated:YES];
+            
+            NSDictionary *dict = [Events getEventSelected:0];
+            
+            [eventDetailViewController.titleLabel setText:[dict valueForKey:@"titulo"]];
+            [eventDetailViewController.dateLabel setText:[dict valueForKey:@"data"]];
+            [eventDetailViewController.descriptionLabel setText:[dict valueForKey:@"sobre"]];
+            [eventDetailViewController setInfoDict:[dict valueForKey:@"descricao"]];
+            
+            NSString *imageString = dict[@"imagem"];
+            [eventDetailViewController.topImageView setImage:[self imageWithURLString:imageString]];
+            [eventDetailViewController.topImageView setBackgroundColor:[eventDetailViewController.topImageView.image averageColor]];
+            
+            break;
+        }
+        case 3: {
+            ClubViewController *clubViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ClubViewController"];
             NSArray *array = [MoreItens getItensList];
-
+            
             [clubViewController setItem:[array objectAtIndex:0]];
             [self.navigationController pushViewController:clubViewController animated:YES];
-
+            break;
         }
-        
+        default:
+            break;
     }
-    
 }
 
+- (UIImage *)imageWithURLString:(NSString *)imageURLString
+{
+    NSURL * imageURL = [NSURL URLWithString:imageURLString];
+    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+    return [UIImage imageWithData:imageData];
+}
 
 @end

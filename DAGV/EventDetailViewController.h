@@ -10,16 +10,10 @@
 
 @interface EventDetailViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
-
 @property (strong,nonatomic)IBOutlet UIImageView *topImageView;
-
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
-
-
-
-
 @property (strong, nonatomic) NSArray *infoDict;
 
 @end
